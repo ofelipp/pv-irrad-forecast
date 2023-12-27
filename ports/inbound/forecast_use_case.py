@@ -2,12 +2,12 @@
 
 from abc import ABCMeta, abstractmethod
 
-from domain.data import Data
+from domain.data import Features, Forecast
 
 
 class ForecastUseCase:
     __metadata__ = ABCMeta
 
     @abstractmethod
-    def predict(self, features: Data) -> Data:
+    def predict(self, features: list[Features]) -> Forecast:
         raise NotImplementedError()
